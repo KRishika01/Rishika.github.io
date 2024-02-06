@@ -1,0 +1,366 @@
+* {
+    padding: 0;
+    margin: 0;   
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('photo.jpeg'),url('color.jpg');
+    background-repeat: no-repeat;
+    background-size: 25% 25%, 100% 100%;
+    background-attachment: scroll;
+    background-position: right bottom,left top;
+    background-position-x: 95%;
+    background-position-y: 8%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* font-size: 20px; */
+    font-size: 16px;
+    transition: background-color 0.5s;
+    margin: 0;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    /* margin-left: 5%; */
+    font-weight: bold;
+    /* font-size: 60px; */
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menu {
+    background: green;
+    text-align: center;
+    position: fixed; 
+    width: 100%;
+    /* padding: 10px 0; */
+    z-index: 1000;
+}
+
+.menu ul {
+
+    display: flex;
+    list-style: none;
+    color: white;
+    padding: 0;
+    margin: 0;
+
+}
+
+/* .menu ul.active {
+    flex-direction: column;
+    align-items: center;
+    background: green;
+} */
+
+.menu ul li {
+    width: 200px;
+    margin: 25px;
+    padding: 20px;
+    /* width: 100%;
+    margin: 15px;
+    margin: 0; */
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.menu ul li:hover {
+    background-color: #2bab0d;
+    border-radius: 10px;
+}
+
+.sub-blog {
+    display: none;
+}
+
+.menu ul li:hover .sub-blog {
+    display: block;
+    position: absolute;
+    background-color: green;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: -15px;
+}
+
+.menu ul li:hover .sub-blog ul {
+
+    display: block;
+    margin: 5px;
+}
+
+.menu ul li:hover .sub-blog ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted white;
+    border-radius: 0;
+    background: transparent;
+    text-align: left;
+}
+
+.menu ul li:hover .sub-blog ul li:last-child {
+    border-bottom: none;
+}
+
+.menu ul li:hover .sub-blog ul li a:hover {
+    color: #b2ffee;
+}
+
+
+.social {
+    display: none;
+}
+
+.menu ul li:hover .social {
+    display: block;
+    position: absolute;
+    background-color: green;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: -15px;
+}
+
+.menu ul li:hover .social ul {
+    display: block;
+    margin: 5px;
+}
+
+.menu ul li:hover .social ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted white;
+    border-radius: 0;
+    background: transparent;
+    text-align: left;
+}
+
+.menu ul li:hover .social ul li:last-child {
+    border-bottom: none;
+}
+
+.menu ul li:hover .social ul li a:hover {
+    color: #b2ffee;
+}
+
+.menu .fa {
+    margin-right: 8px;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #000;
+    margin-left: 25%;
+}
+
+section {
+    margin-left: 20px;
+    color: dimgrey;
+}
+
+
+
+.dark-mode {
+    background: #000;
+    background-size: 50% 100%;
+    color: white;
+}
+
+#toggleModeButton {
+    background-color: #fff; /* Light mode background color */
+    color: #000; /* Light mode text color */
+    border: 2px solid #000; /* Light mode border color */
+    height: 40px;
+    margin-top: 47px;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+.dark-mode #toggleModeButton {
+    background-color: #333; /* Dark mode background color */
+    color: #fff; /* Dark mode text color */
+    border: 2px solid #fff; /* Dark mode border color */
+}
+
+#link {
+    font-size: 30px;
+}
+
+.blog-container {
+    display: block;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.blog {
+    width: 70%;
+    border: 1px solid #000;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.like-button {
+    cursor: pointer;
+    color: #3498db;
+}
+.liked {
+    color: #e74c3c;
+}
+.comments {
+    margin-top: 10px;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.menu ul li,
+.menu .fa,
+h2,
+h1,
+p,
+section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.menu ul li,
+.menu .fa,
+h2,
+h1,
+p,
+section {
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu li li:hover,
+.menu ul li:hover .sub-blog,
+.menu ul li:hover .social {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+    animation: pulse 0.5s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+
+button {
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 1200px) {
+    .menu ul {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-size:100% 100%,100% 100%;
+    }
+    h1 {
+        margin-left: 2%;
+        font-size: 30px;
+    }
+
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: green;
+    }
+
+    .menu ul.active {
+        display: flex;
+    }
+
+    .menu ul li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+    .sub-blog,
+    .social {
+        position: static;
+        display: none;
+        width: 100%;
+    }
+
+    .menu ul li:hover .sub-blog,
+    .menu ul li:hover .social {
+        display: none;
+    }
+   
+    .menu ul li:hover .sub-blog,
+    .menu ul li:hover .social {
+        display: block;
+        position: relative;
+        background-color: green;
+        border-radius: 10px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-left: -15px;
+    }
+
+    .menu button {
+        margin-top: 10px;
+    }
+
+    .menu ul li:hover .sub-blog ul,
+    .menu ul li:hover .social ul {
+        display: block;
+        margin: 5px;
+    }
+
+    .menu ul li:hover .sub-blog ul li,
+    .menu ul li:hover .social ul li {
+        width: 150px;
+        padding: 10px;
+        border-bottom: 1px dotted white;
+        border-radius: 0;
+        background: transparent;
+        text-align: left;
+    }
+
+    .menu ul li:hover .sub-blog ul li:last-child,
+    .menu ul li:hover .social ul li:last-child {
+        border-bottom: none;
+    }
+}

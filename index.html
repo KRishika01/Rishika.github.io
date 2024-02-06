@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <title>Personal Website</title>
+
+            <script src="script.js"></script>
+        </head>
+        <body>
+            
+            <div class="menu">
+                <ul>
+                    
+                    <li><a href="#"><i class="fa fa-bars"></i></a>
+                        <div class="social">
+                            <ul>
+                                <li><a href="https://www.facebook.com/profile.php?id=100095061952277" target="_blank"><i class="fa fa-facebook"></i>  Facebook</a></li> 
+                                <li><a href="https://github.com/KRishika01" target="_blank"><i class="fa fa-github"></i> GitHub</a></li>
+                                <li><a href="mailto:rishikakalakuntla@gmail.com" target="_blank"><i class="fa fa-envelope"> Gmail</i></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#about"><i class="fa fa-user"></i>About Me</a></li>
+                    <li><a href="#image"><i class="fa fa-image"></i>Image</a></li>
+                    <li><a href="#education"><i class="fa fa-graduation-cap"></i>Education background</a></li>
+                    <li><a href="#acheivements"><i class="fa fa-trophy"></i>Achievements</a></li>
+                    <li><a href="#blogs"><i class="fa fa-comments"></i>Blogs <i class="fa fa-chevron-down"></i></a>
+                        <div class="sub-blog">
+                            <ul>
+                                <li><a href="#blog1"><i class="fa fa-comment"></i>Blog 1</a></li>
+                                <li><a href="#blog2"><i class="fa fa-comment"></i>Blog 2</a></li>
+                            </ul>
+                        </div>    
+                    </li>
+                    <li><a href="#skills"><i class="fa fa-music"></i> Skills</a></li>
+                    <button id="toggleModeButton" onclick="toggleMode()">Toggle Mode</button>
+                </ul>
+            </div>
+
+            <br>
+
+            <div class="content">
+                <svg height="130" width="200" style="margin-top: 8%;">
+                    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:rgb(125, 248, 77); stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:  rgb(80, 176, 109); stop-opacity: 1;"  \>
+                    </linearGradient>
+        
+                    <ellipse cx="100" cy="70" rx="85" ry="50" fill="url(#g1)"  />
+                    <text fill="#ffffff" font-size="35" font-family="Veranda" x="70" y="80">KR</text>
+                </svg>
+            </div>
+            
+
+            <h1 style="margin-top: 12%;margin-left: 4%;">WELCOME TO KR'S WEBSITE</h1><br>
+            <p style="margin-left: 5%;font-size: 30px; margin-bottom: 25%;" ><i>Btech student......</i></p>
+
+            <section id="about">
+                <h2 style="font-size: 60px; margin-left: 25%;">About Me</h2><br>
+                <ul style="list-style-type: square; font-size: 25px; margin-left: 20%; font-family: serif;">
+                    <li>My name is Kalakuntla Rishika.</li>
+                    <li>I am from siddipet,Telangana.</li>
+                    <li style="margin-bottom: 60px;">My hobbies are Reading books,playing games.</li>
+                    
+                </ul>
+            </section><br><br>  
+
+            <section id="education">
+                <h2 style="font-size: 60px; margin-left: 17%;">Educational background</h2><br>
+                <ul style="list-style-type: square; font-size: 25px; margin-left: 9%;">
+                    <li>I have completed my board of secondary education in SR DIGI SCHOOL siddipet,Telangana.</li>
+                    <li>I have completed my 12th standard in SR PRIME COLLEGE Warangal,Telangana.</li>
+                    <li>Now I am pursuing my BTech in IIIT HYDERABAD.</li>
+                    <li>I am a student of computer science and engineering.</li>
+                    <li style="margin-bottom: 60px;">I am going to complete my graduation in the year of 2027.</li>
+                </ul>
+            </section>
+
+            <section id="acheivements">
+                <h2 style="font-size: 60px; margin-left: 24%;">Achievements</h2><br>
+                <ul style="list-style-type: square; margin-left: 20%; font-size: 25px;">
+                    <li>I Won gold medal in badminton sport in school</li>
+                    <li>Got state 1st rank in polycet 2021 in argiculture stream</li>
+                    <li style="margin-bottom: 60px;">Got College 1st in central board of secondary education</li>
+
+                </ul>
+            </section><br>
+
+            <section id="skills">
+                <h2 style="font-size: 60px; margin-left: 30%;">Skills</h2><br>
+                <ul style="list-style-type: square; margin-left: 28%; font-size: 25px;" >
+                    <li>Time management</li>
+                    <li>Pressure management</li>
+                    <li>Creativity</li>
+                    <li style="margin-bottom: 60px;">Team work and cooperation</li>
+                </ul>
+            </section><br>
+
+
+            <section id="blogs">
+                <h2 style="font-size: 60px; margin-left: 30%;">Blogs</h2>
+                <div class="blog-container" id="blogContainer">
+                    <!-- Placeholder Blogs -->
+                    <div class="blog" id="blog1">
+                        <button onclick="openBlog1('blog1')" style="font-size: 30px;padding: 15px;">Blog1</button>
+                    </div>
+                    <div class="blog" id="blog2">
+                        <button onclick="openBlog2('blog2')" style="font-size: 30px;padding: 15px;">Blog2</button>
+                    </div>
+
+                </div>
+            </section>
+
+            <a href="file:///home/kalakuntlarishika/Downloads/Assignment%201.pdf" id="link">Click here</a>
+
+
+        </body>
+    </html>

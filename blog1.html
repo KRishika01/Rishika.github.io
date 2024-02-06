@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .blog-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .blog {
+            width: 45%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        .like-button {
+            cursor: pointer;
+            color: #3498db;
+        }
+        .liked {
+            color: #e74c3c;
+        }
+        .comments {
+            margin-top: 10px;
+        }
+    </style>
+    <title>Blog Page</title>
+</head>
+<body>
+    <h1>Blog Page</h1>
+    <div class="blog-container" id="blogContainer">
+        <!-- Placeholder Blogs -->
+        <div class="blog" id="blog1">
+            <h2>Blog Title 1</h2>
+            <p>Content of the blog goes here...</p>
+            <div class="like-button" onclick="toggleLike('blog1', 'likeButton1')">Like</div>
+            <span id="likeButton1" class="like-count">0</span>
+            <div class="comments">
+                <p>Comments:</p>
+                <p>Comment 1</p>
+                <p>Comment 2</p>
+            </div>
+        </div>
+
+        <script>
+            let likes = {
+        blog1: 0,
+        blog2: 0
+    };
+
+    // Function to toggle the like button state
+    function toggleLike(blogId, likeButtonId) {
+        const likeButton = document.getElementById(likeButtonId);
+        likes[blogId] = 1 - likes[blogId]; // Toggle between 0 and 1
+        likeButton.textContent = likes[blogId] ? 'Liked' : 'Like';
+        likeButton.classList.toggle('liked', likes[blogId]);
+        updateLikeCount(blogId, likeButtonId);
+    }
+
+    // Function to update the like count
+    function updateLikeCount(blogId, likeButtonId) {
+        const likeCount = document.getElementById(likeButtonId);
+        likeCount.textContent = likes[blogId];
+}
+        </script>
+</body>
+</html>
+
